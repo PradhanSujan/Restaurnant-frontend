@@ -1,0 +1,17 @@
+@mixin flexprop{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+
+
+@mixin btnBgClr($bgColor, $color){
+    padding:10px 15px;
+    border-radius:0.625rem;
+    margin-top:1rem;
+    border:1px solid #fff;
+    // background:#FF8787;
+    background:$bgColor;
+    font-size:18px;
+    color:$color;
+}

@@ -1,0 +1,203 @@
+
+//in scss ma hamile variable garna sakchhau  with the help of doller sign
+
+// $brand-color:#000;
+
+//sabai vanda best part yo hoki nesting garna sakchhau
+//like parent lai child ma inherit garchha using ampercent
+//&
+
+//like .navbar{}
+//.navbar a{}
+//yesko lagi yesari garna sakchhau like -  & a {}
+//we can create multiple pages using sass
+//jaslai parcial files pani bhanchha
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+// importing sass
+@import '../sass/var';
+@import "../sass/mixin";
+
+
+
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+    font-family: 'Lato', sans-serif;
+
+}
+
+// html{
+//     font-size: 62.5%;
+//     //that means 1px = 16 nai 10px bhayo
+// }
+
+/* header style css */
+.header-wraper{
+    background-color:#E5EBB2;
+    height:330px;
+    width:100vw;
+    padding:10px 20px;
+    border-bottom-right-radius:200px;
+}
+
+.header-wraper .main-nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:20px;
+}
+
+.header-wraper .main-nav .logo{
+    text-decoration:none;
+    color:$brand-color;
+    font-size:20px;
+}
+
+
+.main-nav .nav-list{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:50px;
+    margin-right:200px;
+}
+.main-nav .nav-list  .list-item{
+    list-style:none;
+
+}
+.main-nav .nav-list  .list-item a{
+    text-decoration:none;
+    color:#FF8787;
+    padding:20px;
+
+    
+}
+.main-nav .nav-list  .list-item a:hover{
+    background-color:#F8C4B4;
+    padding:20px;
+    cursor:pointer;
+    color:#fff;
+
+}
+
+.site-header .main-nav .navbar-logo{
+    font-size:30px;
+    color:#000;
+    text-decoration:none;
+
+
+}
+
+.header-data-info{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding-top:1.25rem;
+}
+
+.header-data-info .left-data-info h1{
+    color:#FF8787;
+}
+
+.left-data-info .header-btn{
+    @include  btnBgClr(rgb(255, 135, 135), #fff);
+
+}
+
+.left-data-info .header-btn:hover{
+    background-color:#BCE29E;
+    cursor:pointer;
+    border:1px solid #ddd;
+    color:#000;
+}
+
+.right-data-info .header-img{
+    width:400px;
+    height:200px;
+    transform:translate(-20px, 36px);
+    border-bottom-right-radius:200px;
+}
+
+/*................... main style...................*/
+.main-wrapper{
+    width:100vw;
+    height:100vh;
+    background-color:#ddd;
+}
+
+.main-wrapper .main-container{
+    width:100vw;
+    height:100vh;
+}
+.main-wrapper .meal-content{
+    @include flexprop;
+    flex-direction:column;
+    padding:1.6rem;
+    width:100%;
+    
+}
+.meal-content .meal-title h2{
+    color:$font-color;
+}
+
+ .meal-card-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap: wrap;
+    padding-top:2rem;
+    gap:2rem;
+    
+}
+
+// .meal-card-container .meal-card{
+//     flex:10%;
+// }
+
+.meal-card-container .meal-card .meal-btn{
+    @include  btnBgClr(rgb(188, 226, 158), #000);
+}
+
+/* Responsive layout makes a one column layout insted of two colum layout */
+// @media (max-width:60px) {
+//     .meal-card-container .meal-card{
+//         // flex:10%;
+//     }
+
+// }
+
+
+.meal-card .meal-btn:hover{
+    background-color:#F8C4B4;
+    cursor:pointer;
+    border:1px solid #ddd;
+    color:#fff;
+}
+
+.main-container .article-about{
+    width:100%;
+    height:400px;
+    margin-top:100px;
+    background-color:gray;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    padding:20px;
+}
+
+.article-about .about-left-content{
+    flex:50%;
+    
+}
+
+.about-left-content .about-img{
+    width:400px;
+    height:200px;
+}
+.article-about .about-right-content{
+    flex:50%;
+}
