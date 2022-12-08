@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import Navbar from "./Navbar";
 import headerImg from '../../assets/images/headerImg.jpg';
 
-const Header = () => {
+export const Header = () => {
   return (
     <>
       <header className="header-wraper">
