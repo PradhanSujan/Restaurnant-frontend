@@ -1,41 +1,44 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Navbar from "./Navbar";
-import headerImg from '../../assets/images/headerImg.jpg';
+// import headerImg from '../../assets/images/headerImg.jpg';
+import logo from '../../assets/brand/logo.png';
 
 export const Header = () => {
   return (
     <>
-      <header className="header-wraper">
-        <nav className="navbar">
-          <div className="main-nav">
-            <NavLink to="/" className="logo" >
-              Resturant.
-            </NavLink>
+      <div className="header-wrapper">
+        <div className="main-header">
+          <div className="header-logo-title">
+            <div className="header-logo">
+                <img src={logo} alt="headerlogo" className="logo"/>
+            </div>
+            <div className="header-title">
+                <p>Resturant.</p>
+            </div>
+            </div>
 
-            <ul className="nav-list">
+            <div className="header-navbar">
+              <ul className="header-navbar-list">
               {Navbar.map((nav,i) => {
                 return (
                   <li key={i} className="list-item">
-                    <NavLink to={nav.path}>{nav.title}</NavLink>
+                    <NavLink className="active" to={nav.path} >{nav.title}</NavLink>
                   </li>
                 );
               })}
-            </ul>
-          </div>
-        </nav>
-        <div className="header-data-info">
-          <div className="left-data-info">
-            <h1>Stay Healthy and Choose your taste</h1>
-            <p>lorem this is best websiey</p>
 
-            <button className="btn header-btn">Order Now</button>
-          </div>
-          <div className="right-data-info">
-            <img className="header-img" src={headerImg} alt="img" />
-          </div>
+              </ul>
+              </div>
+
+            <div>
+
+            </div>
+
+
         </div>
-      </header>
+
+      </div>
     </>
   );
 };

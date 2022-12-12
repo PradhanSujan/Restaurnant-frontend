@@ -1,7 +1,11 @@
 import React from 'react';
+
+import Main from '../../layouts/main/Main';
  const Home = () =>{
     return(
-        <>This is Home</>
+        <>
+            <Main/>
+        </>
     )
     
 }
