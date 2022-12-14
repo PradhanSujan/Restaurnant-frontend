@@ -7,7 +7,7 @@ import logo from '../../assets/brand/logo.png';
 export const Header = () => {
   return (
     <>
-      <div className="header-wrapper">
+      <header className="header-wrapper">
         <div className="main-header">
           <div className="header-logo-title">
             <div className="header-logo">
@@ -38,7 +38,7 @@ export const Header = () => {
 
         </div>
 
-      </div>
+      </header>
     </>
   );
 };

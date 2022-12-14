@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ddf57701.css",
+    "main.js": "/static/js/main.8576be8c.js",
+    "static/media/about.jpg": "/static/media/about.bc383a80e17ac9550e5a.jpg",
+    "static/media/hero.png": "/static/media/hero.5d8d176fc8e5e8d81391.png",
+    "static/media/gallery-1.png": "/static/media/gallery-1.2a64d62489112275cfef.png",
+    "static/media/gallery-3.png": "/static/media/gallery-3.769f95a1b0653887e702.png",
+    "static/media/meetinghall.png": "/static/media/meetinghall.611a0df3b5b91844929a.png",
+    "static/media/hall.png": "/static/media/hall.dc1d11405aba29655e2f.png",
+    "static/media/gallery-2.png": "/static/media/gallery-2.d4942749375b640b4622.png",
+    "static/media/gallery-4.png": "/static/media/gallery-4.4dc6b25c34b1d090676d.png",
+    "static/media/logo.png": "/static/media/logo.38676331e7be228eef5b.png",
+    "static/media/pizza.jpg": "/static/media/pizza.12dcff387cff601934c2.jpg",
+    "static/media/chicken.jpg": "/static/media/chicken.db103168ccefb4232a0e.jpg",
+    "static/media/thakali.jpg": "/static/media/thakali.9fd50039217e2c3c7f41.jpg",
+    "static/media/burger.jpg": "/static/media/burger.d1593aed9f787e0d73d5.jpg",
+    "static/media/client.png": "/static/media/client.11a5311a702f46cc7afb.png",
+    "index.html": "/index.html",
+    "main.ddf57701.css.map": "/static/css/main.ddf57701.css.map",
+    "main.8576be8c.js.map": "/static/js/main.8576be8c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ddf57701.css",
+    "static/js/main.8576be8c.js"
+  ]
+}
