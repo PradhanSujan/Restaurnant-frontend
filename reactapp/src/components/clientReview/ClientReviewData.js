@@ -1,10 +1,8 @@
-import client from '../../assets/images/client.png'
-
+// import client from '../../assets/images/client.png'
 const ClientReviewData = [
     {
         name: "Hari Karki",
         address:"Kapan, Kathmandu",
-        image:{client},
         review:`For a perfect date, a business meeting, lone time or casual
                   family dine, this place is one of the best fit in Kathmandu.
                   Great food, enough space with great ambience and enough
@@ -13,7 +11,6 @@ const ClientReviewData = [
     {
         name: "Sita Rai",
         address:"Chabahil, Kathamandu",
-        image:{client},
         review:`For a perfect date, a business meeting, lone time or casual
                   family dine, this place is one of the best fit in Kathmandu.
                   Great food, enough space with great ambience and enough

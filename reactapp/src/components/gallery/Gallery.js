@@ -11,9 +11,9 @@ const Gallery = () => {
       <div className="gallery">
         <div className="gallery-container">
           <div className="gallery-title">
-          <h4>
+          <h3>
           Our Gallery
-          </h4>
+          </h3>
           </div>
           <div className="gallery-images">
             <CardGallery imgSrc={gallery1} />

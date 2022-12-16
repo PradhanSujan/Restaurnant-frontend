@@ -8,14 +8,14 @@ const ClientReview = () => {
       <div className="client-review">
         <div className="client-container">
           <div className="client-title">
-            <h4>Our Client Review</h4>
+            <h3>Our Client Review</h3>
           </div>
 
           <div className="client-review-section">
             {
-              ClientReviewData.map((value)=>{
+              ClientReviewData.map((value, i)=>{
                 return <CardReview name={value.name} address={value.address} 
-                  image={value.img} review={value.review}
+                  image={value.image} review={value.review} key={i}
                 />
 
               })
@@ -23,6 +23,7 @@ const ClientReview = () => {
           </div>
         </div>
       </div>
+        <hr/>
     </>
   );
 };

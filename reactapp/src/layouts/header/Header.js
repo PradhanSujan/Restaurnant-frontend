@@ -1,10 +1,12 @@
-import React from "react";
+import React,{useState} from "react";
 import { NavLink } from "react-router-dom";
 import Navbar from "./Navbar";
 // import headerImg from '../../assets/images/headerImg.jpg';
 import logo from '../../assets/brand/logo.png';
 
-export const Header = () => {
+ const Header = () => {
+
+  const [click, setClick] = useState(false);
   return (
     <>
       <header className="header-wrapper">
