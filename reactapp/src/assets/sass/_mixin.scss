@@ -4,6 +4,9 @@
     align-items:center;
 }
 
+@mixin flexcenter{
+    
+}
 
 @mixin btnBgClr($bgColor, $color){
     padding:10px 15px;

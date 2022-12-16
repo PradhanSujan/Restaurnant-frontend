@@ -7,17 +7,19 @@ const Food = () => {
     <>
         {/* food quality container */}
         <div className="choose-food-container">
+        <div className='choose-food'>
           <h3>Why Choose Us</h3>
           <div className="choose-food-image">
             <div className="left-food-image">
               <img className="food-image" src={pizza} alt="foodimage"/>
             </div>
             <div className="right-food-info">
-               {chooseFoodData.map((value) =>{
-                return <ChooseFoodCard icon={value.icon} title={value.title}  description={value.description}/>
+               {chooseFoodData.map((value, i) =>{
+                return <ChooseFoodCard icon={value.icon} title={value.title}  description={value.description} key={i}/>
                })}
             </div>
 
+          </div>
           </div>
 
         </div>
