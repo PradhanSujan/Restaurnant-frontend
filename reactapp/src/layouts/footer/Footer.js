@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="main-footer">
           <div className="footer-top">
             <div className="footer-title contact">
-              <h3>Contact Us</h3>
+              <h5>Contact Us</h5>
               <div className="address footer">
                 <div className="address-icon icon">
                   <span>
@@ -22,7 +22,7 @@ const Footer = () => {
                   </span>
                 </div>
                 <div className="address-details">
-                  <h4 className="title">Address</h4>
+                  <h6 className="title">Address</h6>
                   <p>TInkune, Kathmandu</p>
                 </div>
               </div>

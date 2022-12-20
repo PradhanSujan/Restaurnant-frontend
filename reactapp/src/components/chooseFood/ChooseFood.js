@@ -11,7 +11,7 @@ const Food = () => {
           <h3>Why Choose Us</h3>
           <div className="choose-food-image">
             <div className="left-food-image">
-              <img className="food-image" src={pizza} alt="foodimage"/>
+              <img src={pizza} alt="foodimage"/>
             </div>
             <div className="right-food-info">
                {chooseFoodData.map((value, i) =>{

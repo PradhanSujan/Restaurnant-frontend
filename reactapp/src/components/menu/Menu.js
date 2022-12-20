@@ -11,10 +11,8 @@ const Menu = () => {
       <div className="menu-section">
         <div className="menu-container">
           <div className="menu-description">
-            <p>
-              “Food is not just eating energy. It's an experience.
-            </p>
             <h3>Our Special Menu</h3>
+            <p>Get here all dishes</p>
           </div>
 
           <div className="menu-content">
@@ -29,7 +27,7 @@ const Menu = () => {
           </div>
         </div>
       </div>
-      <hr/>
+      
     </>
   );
 };

@@ -2,9 +2,6 @@
 import React, {useState, useEffect} from 'react'
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-
-import about from '../../assets/images/about.jpg';
-import hero from '../../assets/images/hero.png';
 import heroData from './heroData';
 
 const Hero = () => {
@@ -17,8 +14,6 @@ console.log(maxSlide);
 //   // current === 0 ? setCurrent (hData - 1);
 //   // const data = current === hData - 1 ? 0 : current + 1;
 //   // console.log(data);
-
-
   
 // }
 
@@ -53,19 +48,22 @@ useEffect(() => {
     <>
         <div className='hero-section'>
             <div className='hero-container'>
-                <div className="hero-image" style={{backgroundImage:`linear-gradient(rgba(4, 9, 30, 0.3), rgba(4, 9, 30, 2)),url(${hero})`}}>
-                {heroData.map((val,index)=>{
+                <div className="hero-image-section">
+                {/* {heroData.map((val,index)=>{
 
                       return (
                       <div key={index} className={index === currSlide? "active" :"inactive"}>
-                      <img src={val.image} />
+                      <img src={val.image} alt="img" />
                       </div>
                       )
-                })}
+                })} */}
                 <span className='left-arrow btn'><ArrowBackIosIcon onClick={prevSlide}/></span>
                 <div className='hero-content'>
-                <h1>Stay Healthy & <span>Choose Your Taste</span></h1>
+                <h2>Stay Healthy & <br/><span>Choose Your Taste</span></h2>
                 <p>This is the best resturant your visted first. You never get borded and ignored.</p>
+                <div className='btn-group'>
+                    <button className='btn-started'>Get Started</button>
+                </div>
                 </div>
 
                 <span className='right-arrow btn'><ArrowForwardIosIcon onClick={nextSlide}/></span>

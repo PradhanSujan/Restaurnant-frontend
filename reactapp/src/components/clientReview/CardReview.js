@@ -14,7 +14,7 @@ const CardReview = (props) => {
                   <img src={client} alt="img" />
                 </div>
                 <div className="client-info">
-                  <h5>{props.name}</h5>
+                  <p className='client-name'>{props.name}</p>
                   <p>{props.address}</p>
                 </div>
               </div>
