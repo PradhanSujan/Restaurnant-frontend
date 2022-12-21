@@ -1,9 +1,9 @@
 import React from "react";
 import CardGallery from "./CardGallery";
-import gallery1 from '../../assets/images/gallery-1.png';
-import gallery2 from '../../assets/images/gallery-2.png';
-import gallery3 from '../../assets/images/gallery-3.png';
-import gallery4 from '../../assets/images/gallery-4.png';
+import gallery1 from "../../assets/images/gallery-1.png";
+import gallery2 from "../../assets/images/gallery-2.png";
+import gallery3 from "../../assets/images/gallery-3.png";
+import gallery4 from "../../assets/images/gallery-4.png";
 
 const Gallery = () => {
   return (
@@ -11,9 +11,8 @@ const Gallery = () => {
       <div className="gallery">
         <div className="gallery-container">
           <div className="gallery-title">
-          <h3>
-          Our Gallery
-          </h3>
+            <p>Food Catalog</p>
+            <h3><span>Ou</span>r Gallery</h3>
           </div>
           <div className="gallery-images">
             <CardGallery imgSrc={gallery1} />

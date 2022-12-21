@@ -7,7 +7,7 @@ export default function MenuCard(props) {
             <img src={props.imgSrc} alt="pizza" />
             <div className="menu-body">
             <h5>{props.title}</h5>
-            <p>{props.para}</p>
+            <p>{props.price}</p>
             <button className="menu-btn">Order Now</button>
             </div>
           </div>

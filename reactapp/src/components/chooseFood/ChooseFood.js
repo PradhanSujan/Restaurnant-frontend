@@ -8,7 +8,11 @@ const Food = () => {
         {/* food quality container */}
         <div className="choose-food-container">
         <div className='choose-food'>
-          <h3>Why Choose Us</h3>
+          <div className='choose-title'>
+          <p>Why Choose Us</p>
+          <h3>Our Food Taste and Experience</h3>
+          </div>
+          
           <div className="choose-food-image">
             <div className="left-food-image">
               <img src={pizza} alt="foodimage"/>

@@ -9,6 +9,7 @@ const Events = () => {
       <div className="event-section">
         <div className="event-container">
           <div className="event-title">
+          <p>Let's join</p>
             <h3>Our Events</h3>
           </div>
           <div className="event-cards">
