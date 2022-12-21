@@ -13,6 +13,7 @@ const hall = () => {
 
             </div>
             <div className="hall-info">
+              <p>let's meet</p>
               <h3>Hall Meetings</h3>
               <p>Looking for perfect destination to spend a quality time with good food 
               and peaceful environment? Come pay us a visit today!

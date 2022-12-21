@@ -1,8 +1,12 @@
 
 import React, {useState, useEffect} from 'react'
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+// import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+// import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import heroData from './heroData';
+import hero from '../../assets/images/hero.png';
+import burger from '../../assets/images/burger.jpg';
+import pizza from '../../assets/images/pizza.jpg';
+
 
 const Hero = () => {
 
@@ -48,7 +52,7 @@ useEffect(() => {
     <>
         <div className='hero-section'>
             <div className='hero-container'>
-                <div className="hero-image-section">
+                <div className="hero-left">
                 {/* {heroData.map((val,index)=>{
 
                       return (
@@ -57,17 +61,25 @@ useEffect(() => {
                       </div>
                       )
                 })} */}
-                <span className='left-arrow btn'><ArrowBackIosIcon onClick={prevSlide}/></span>
                 <div className='hero-content'>
-                <h2>Stay Healthy & <br/><span>Choose Your Taste</span></h2>
+                <h2>Stay Healthy & <span>Choose Your Taste</span></h2>
                 <p>This is the best resturant your visted first. You never get borded and ignored.</p>
                 <div className='btn-group'>
                     <button className='btn-started'>Get Started</button>
                 </div>
                 </div>
 
-                <span className='right-arrow btn'><ArrowForwardIosIcon onClick={nextSlide}/></span>
-                </div>          
+                {/* <span className='right-arrow btn'><ArrowForwardIosIcon onClick={nextSlide}/></span> */}
+                </div>     
+
+                <div className="hero-right">
+                <img className='hero-img img1' src={pizza} alt="img"/>
+                <img className='hero-img img2' src={burger} alt="img"/>
+                <img className='hero-img img3' src={hero} alt="img"/>
+                <div className='hero-img-circle'>
+                    <img src={hero} alt="img"/>
+                </div>
+                </div>     
 
             </div>
 

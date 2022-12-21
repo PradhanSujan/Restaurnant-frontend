@@ -1,5 +1,4 @@
 import React from 'react'
-import client from '../../assets/images/client.png';
 const CardReview = (props) => {
   return (
     <>
@@ -11,7 +10,7 @@ const CardReview = (props) => {
               </div>
               <div className="client-details">
                 <div className="client-image">
-                  <img src={client} alt="img" />
+                  <img src="" alt="img" />
                 </div>
                 <div className="client-info">
                   <p className='client-name'>{props.name}</p>

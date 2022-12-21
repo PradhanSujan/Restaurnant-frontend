@@ -22,7 +22,7 @@ const Navbar = [
   },
   {
     title: "Login",
-    Path : "/login"
+    path :"/login"
   }
 ];
 

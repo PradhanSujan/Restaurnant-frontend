@@ -21,8 +21,8 @@ const Footer = () => {
                     <FmdGoodIcon />
                   </span>
                 </div>
-                <div className="address-details">
-                  <h6 className="title">Address</h6>
+                <div className="footer-details">
+                  <p className="title">Address</p>
                   <p>TInkune, Kathmandu</p>
                 </div>
               </div>
@@ -33,8 +33,8 @@ const Footer = () => {
                     <MailIcon />
                   </span>
                 </div>
-                <div className="email-details">
-                  <h4 className="title">Address</h4>
+                <div className="footer-details">
+                  <p className="title">Address</p>
                   <p>TInkune, Kathmandu</p>
                 </div>
               </div>
@@ -45,15 +45,15 @@ const Footer = () => {
                     <PhoneIcon />
                   </span>
                 </div>
-                <div className="phone-details">
-                  <h4 className="title">Address</h4>
+                <div className="footer-details">
+                  <p className="title">Address</p>
                   <p>TInkune, Kathmandu</p>
                 </div>
               </div>
             </div>
 
             <div className="footer-title quicklinks">
-              <h3>Quick Links</h3>
+              <h5>Quick Links</h5>
               <div className="quicklinks-details">
                 <ul className="list">
                   <li>Home</li>
@@ -64,7 +64,7 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="footer-title google-map">
+            <div className="google-map">
               <img src={googlemap} alt="map" />
             </div>
           </div>
