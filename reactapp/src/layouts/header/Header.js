@@ -1,45 +1,54 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Navbar from "./Navbar";
 // import headerImg from '../../assets/images/headerImg.jpg';
-import logo from '../../assets/brand/logo.png';
-
- const Header = () => {
+import logo from "../../assets/brand/logo.png";
+import { FaBars } from "react-icons/fa";
+const Header = () => {
 
   const [click, setClick] = useState(false);
+  // when click value alaways be negative
+  //means positive huda negative and negative huda positive
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
+
   return (
     <>
       <header className="header-wrapper">
         <div className="main-header">
-          <div className="header-logo-title">
             <div className="header-logo">
-                <img src={logo} alt="headerlogo" className="logo"/>
+              <img src={logo} alt="headerlogo" className="logo" />
+              <p>Resturant.</p>
             </div>
-            <div className="header-title">
-                <p>Resturant.</p>
-            </div>
-            </div>
-
-            <div className="header-navbar">
-              <ul className="header-navbar-list">
-              {Navbar.map((nav,i) => {
+            
+          <div className="header-navbar">
+            <ul className={click ? "navbar mobile-navbar-active" : "navbar"}>
+              {Navbar.map((nav, i) => {
                 return (
                   <li key={i} className="list-item">
-                    <NavLink className="active" to={nav.path} >{nav.title}</NavLink>
+                    <NavLink
+                      className="active"
+                      to={nav.path}
+                      onClick={closeMobileMenu}
+                    >
+                      {nav.title}
+                    </NavLink>
                   </li>
                 );
               })}
+            </ul>
+          </div>
 
-              </ul>
-              </div>
-
-            <div>
-
-            </div>
-
-
+          <div></div>
         </div>
-
+        {/* menu bar */}
+        <div id="mobile" onClick={handleClick}>
+              <i
+                className={
+                  click ? "fa-regular fa-circle-xmark" : "fa-solid fa-bars"
+                }
+              ></i>
+            </div>
       </header>
     </>
   );

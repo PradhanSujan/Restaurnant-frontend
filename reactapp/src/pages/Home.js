@@ -7,6 +7,7 @@ import About from '../components/about/About';
 import Menu from '../components/menu/Menu';
 import ChooseFood from '../components/chooseFood/ChooseFood';
 import Hall from '../components/meetinghall/hall';
+import Events from '../components/event/Events';
 import ClientReview from '../components/clientReview/ClientReview';
 import Gallery from '../components/gallery/Gallery';
  const Home = () =>{
@@ -18,6 +19,7 @@ import Gallery from '../components/gallery/Gallery';
         <Menu/>
         <ChooseFood />
         <Hall/>
+        <Events/>
         <ClientReview/>
         <Gallery/>
         </div>

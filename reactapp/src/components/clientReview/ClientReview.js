@@ -1,6 +1,8 @@
 import React from "react";
 import CardReview from "./CardReview";
 import ClientReviewData  from './ClientReviewData';
+import { FaUserCircle } from "react-icons/fa";
+
 
 const ClientReview = () => {
   return (
@@ -15,7 +17,7 @@ const ClientReview = () => {
             {
               ClientReviewData.map((value, i)=>{
                 return <CardReview name={value.name} address={value.address} 
-                  image={value.image} review={value.review} key={i}
+                  image={value.FaUserCircle} review={value.review} key={i}
                 />
 
               })
@@ -23,7 +25,6 @@ const ClientReview = () => {
           </div>
         </div>
       </div>
-        <hr/>
     </>
   );
 };
