@@ -1,4 +1,6 @@
 import React from 'react'
+import '../../assets/style/ClientReview.scss';
+
 const CardReview = (props) => {
   return (
     <>

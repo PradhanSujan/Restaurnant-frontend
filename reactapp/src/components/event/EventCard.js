@@ -1,5 +1,5 @@
 import React from "react";
-
+import '../../assets/style/Events.scss';
 const EventCard = (props) => {
   return (
     <>

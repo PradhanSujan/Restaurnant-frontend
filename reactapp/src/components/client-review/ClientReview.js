@@ -3,6 +3,7 @@ import CardReview from "./CardReview";
 import ClientReviewData  from './ClientReviewData';
 import { FaUserCircle } from "react-icons/fa";
 
+import '../../assets/style/ClientReview.scss';
 
 const ClientReview = () => {
   return (

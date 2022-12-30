@@ -1,0 +1,54 @@
+
+@import './mixin';
+.achievement-section {
+    width: 100%;
+    height: 40rem;
+    padding: 3rem;
+}
+
+.achievement-section h3 {
+    text-align: center;
+}
+
+.achievement-container {
+    margin-top: 5rem;
+    @include flex-around-wrap;
+}
+
+.achievement-container .achievements {
+    width: 25rem;
+    height: 15rem;
+    @include flex-direction-column;
+    background-color: #fff;
+    gap: 1rem;
+}
+
+.achievement-container .achievements .icon {
+    color: orange;
+    font-size: 5rem;
+}
+
+.achievement-container .achievements .achievements-num {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+@media (max-width: 990px) {
+    .achievement-section {
+        height: 75rem;
+    }
+
+    .achievement-container {
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+
+}
+
+@media (max-width: 800px) {
+    .achievement-section h3 {
+        font-size: 3rem;
+    }
+
+}

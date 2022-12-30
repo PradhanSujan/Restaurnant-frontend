@@ -1,0 +1,122 @@
+@import "./mixin";
+@import "./colors";
+
+.choose-food-container {
+  width: 100%;
+  height: 70rem;
+}
+
+.choose-food {
+  @include flex-column;
+}
+
+.choose-food .choose-title {
+  margin-top: 5rem;
+  text-align: center;
+  color: $main-color;
+  margin-bottom: 2rem;
+}
+
+.choose-food-container .choose-food-image {
+  @include flex-around;
+  padding-top: 4rem;
+  gap: 5rem;
+}
+
+.choose-food-container .choose-food-image .left-food-image img {
+  height: 35rem;
+  width: 35rem;
+  // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  // filter: drop-shadow(-2px 4px 20px #000);
+}
+
+.choose-food-container .choose-food-image .right-food-info {
+  width: 70rem;
+  height: 40rem;
+  @include flex-direction-column;
+}
+
+.right-food-info .food-taste {
+  @include flex-center;
+  gap: 2rem;
+  padding: 3rem;
+}
+
+.right-food-info .food-taste .food-icon .icon .MuiSvgIcon-root {
+  color: $secondary-color;
+  font-size: 3.5rem;
+}
+
+.right-food-info .food-taste .food-info .food-title {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1rem;
+}
+
+@media (max-width: 1200px) {
+  .choose-food-container {
+    width: 100%;
+    height: 70rem;
+  }
+
+  .choose-food-container .choose-food-image {
+    padding: 5rem;
+  }
+}
+
+@media (max-width: 990px) {
+  .choose-food-container {
+    width: 100%;
+    height: 110rem;
+    background-color: #ddd;
+  }
+
+  .choose-food-container .choose-food-image {
+    flex-direction: column;
+  }
+
+  .choose-food-container .choose-food-image .right-food-info {
+    width: 50rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .choose-food h3 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .right-food-info .food-taste {
+    padding: 2rem;
+  }
+  .choose-food-container .choose-food-image .right-food-info {
+    width: 40rem;
+    height: 40rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .choose-food-container {
+    width: 100%;
+    height: 130rem;
+    background-color: #ddd;
+  }
+  .choose-food-container .choose-food-image {
+    gap: 20rem;
+  }
+
+  .choose-food-container .choose-food-image .left-food-image img {
+    height: 30rem;
+    width: 25rem;
+  }
+
+  .right-food-info .food-taste {
+    padding: 2rem;
+  }
+
+  .choose-food-container .choose-food-image .right-food-info {
+    width: 25rem;
+    height: 30rem;
+  }
+}
