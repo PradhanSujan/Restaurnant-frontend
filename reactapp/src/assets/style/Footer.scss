@@ -1,0 +1,113 @@
+.footer-section {
+  width: 100%;
+  height: 50rem;
+}
+.main-footer {
+  width: 100%;
+  background-color: rgb(26, 26, 26);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.main-footer .footer-top {
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem;
+  flex-wrap: wrap;
+}
+
+.main-footer .footer-top .footer-title {
+  color: #fff;
+  letter-spacing: 0.1rem;
+}
+
+.main-footer .footer-top .contact .footer {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 1rem 0;
+  line-height: 2rem;
+}
+
+.main-footer .footer-top .footer-title .footer .footer-details {
+  line-height: 3rem;
+}
+
+.footer .footer-details .title {
+  font-weight: 700;
+}
+.main-footer .footer-top .contact .footer .icon {
+  padding: 0.5rem 1rem;
+  border: 0.1rem solid #fff;
+  border-radius: 0.5rem;
+}
+
+.main-footer .footer-top .quicklinks .quicklinks-details ul li {
+  list-style: none;
+  padding: 2rem 0;
+  text-transform: uppercase;
+}
+
+.main-footer .footer-top .google-map img {
+  width: 40rem;
+  height: 27rem;
+}
+
+.main-footer .footer-bottom {
+  display: flex;
+  background-color: rgb(14, 13, 13);
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.main-footer .footer-bottom .sociallinks {
+  display: flex;
+}
+.main-footer .footer-bottom .sociallinks span {
+  padding: 1rem;
+}
+
+/*...........Media Query.......*/
+
+@media (max-width: 990px) {
+  .main-footer {
+    height: 120rem;
+  }
+
+  .main-footer .footer-top {
+    flex-direction: column;
+  }
+
+  .main-footer .footer-top .footer-title {
+    margin: 1.3rem;
+  }
+
+  .main-footer .footer-top .contact .footer {
+    gap: 2rem;
+    padding: 1rem 0;
+  }
+}
+
+
+@media (max-width:990px) {
+}
+
+
+@media (max-width:800px) {
+  .main-footer .footer-top .footer-title h5{
+    font-size:2rem;
+  }
+}
+
+
+@media (max-width:480px) {
+  .main-footer .footer-top .google-map img {
+    width:20rem;
+    height:18rem;
+  }
+}

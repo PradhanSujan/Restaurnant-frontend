@@ -1,0 +1,42 @@
+@import '../../assets//style//colors';
+
+.go-top{
+    display:flex;
+    justify-content:flex-end;
+    padding:0rem 1rem;
+}
+.top-btn{
+    width:5rem;
+    height:5rem;
+    border-radius:0.5rem;
+    background-color:$main-color;
+    border:none;
+    z-index:999;
+    position:fixed;
+    bottom:2rem;
+    transition:all 0.2s ease-in;
+}
+
+.top-btn:hover{
+    cursor:pointer;
+    background-color:#000;
+}
+.top-btn-icon{
+    font-size:1.8rem;
+    color:#fff;
+    animation: gototop 1.2s linear infinite alternate-reverse;
+}
+
+@keyframes gototop{
+    0%{
+        transform:translateY(0.5rem)
+    }
+    100%{
+        transform:translateY(1rem)
+
+        
+    }
+
+    
+}
+

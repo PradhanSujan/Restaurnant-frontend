@@ -1,0 +1,98 @@
+@import './mixin';
+@import './colors';
+
+  /* client review */
+  .client-review {
+    width: 100%;
+    height: 60rem;
+    background-color: #b9cdc0;
+    background: linear-gradient(
+      130deg,
+      $secondary-color 50%,
+      $bg-color 50%
+    );
+  }
+  
+  .client-review .client-container {
+    @include flex-direction-column;
+    padding: 5rem 0;
+    gap: 2rem;
+  }
+  
+  .client-review .client-container .client-title h4 {
+    font-size: 2.5rem;
+  }
+  
+  .client-review .client-container .client-review-section {
+    @include flex-only-space-between;
+    padding: 2rem;
+  }
+  
+  .client-review-section .client-section {
+    @include flex-column;
+    padding: 1rem 7rem;
+  }
+  
+  .client-review-section .client-section .client-para {
+    padding: 3rem;
+  }
+  
+  .client-review-section .client-section .client-details {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+    gap: 2rem;
+  }
+  
+  .client-review-section
+    .client-section
+    .client-details
+    .client-info
+    .client-name {
+    font-weight: 600;
+  }
+  .client-review-section .client-section .client-details .client-image img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+  }
+
+
+/*........Media Query.......*/
+
+
+@media (max-width:800px){
+    .client-review {
+        height: 70rem;
+      }
+    
+    
+}
+
+@media (max-width:600px){
+    .client-review {
+        height: 80rem;
+      }
+      .client-review .client-container {
+        padding: 5rem 0;
+        gap: 1rem;
+      }
+    
+      .client-review-section .client-section {
+        padding: 1rem 2rem;
+      }
+    
+}
+
+@media (max-width:480px){
+    .client-review {
+        height: 100rem;
+      }
+    
+      .client-review .client-container .client-review-section {
+        justify-content: space-between;
+        padding: 2rem;
+        flex-wrap: wrap;
+      }
+    
+}

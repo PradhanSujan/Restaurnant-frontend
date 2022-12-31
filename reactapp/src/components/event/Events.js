@@ -3,6 +3,9 @@ import sajjan from "../../assets/images/sajjan.png";
 import bipulChettri from "../../assets/images/bipulChettri.png";
 import worldcup from "../../assets/images/worldcup.png";
 import EventCard from "./EventCard";
+
+import '../../assets/style/Events.scss';
+
 const Events = () => {
   return (
     <>
