@@ -1,4 +1,3 @@
-
 const Navbar = [
   {
     title: "Home",
@@ -22,8 +21,10 @@ const Navbar = [
   },
   {
     title: "Login",
-    path :"/login"
-  }
+    path: "/login",
+  },
+  { title: "SignUp", 
+  path: "/sign-up" },
 ];
 
 export default Navbar;

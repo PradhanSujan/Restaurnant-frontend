@@ -12,6 +12,7 @@ import Contact from "./pages/contact/Contact";
 import Login from "./pages/login/Login";
 
 import GoToTop from "./components/go-to-top/GoToTop";
+import Register from "./pages/signup/Register";
 const App = () => {
   return (
     <Router>
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/events" element={<Events />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/sign-up" element={<Register />} />
       </Routes>
       <GoToTop/>
       <Footer />
