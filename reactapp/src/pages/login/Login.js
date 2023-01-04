@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles.css"
+import '../../assets/style/Login.scss';
 
 const Login = () => {
   return (
@@ -26,7 +26,7 @@ const Login = () => {
         <div className="alternative-signup">
           <p>
             Not a member?{" "}
-            <span>
+            <span className="signup-btn">
               <a href="/sign-up">Sign-up</a>
             </span>
           </p>

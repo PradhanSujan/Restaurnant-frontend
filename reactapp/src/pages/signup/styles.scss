@@ -16,14 +16,10 @@ $main-color : black;
         background-color: white;
         color: $sub-color;
         font-size: 18px;
-        padding: 10px 10px 10px 5px;
-        display: block;
+        padding: 5px 10px 10px 5px;
         width: 100%;
         border: none;
-        border-radius: 0;
         border-bottom: 1px solid $sub-color;
-        margin: 25px 0;
-
         &:focus{
             outline: none;
         }
@@ -51,3 +47,45 @@ $main-color : black;
         }
     }
 }
+
+
+.btn-register{
+    // min-width: 165px;
+    // width: auto;
+    // height: 50px;
+    // letter-spacing: 0.5px;
+    // line-height: 50px;
+    // padding: 0 35px;
+    // font-size: 15px;
+    // background-color: black;
+    // color: white;
+    // text-transform: uppercase;
+    // font-family: 'Open Sans Condensed';
+    // font-weight: bolder;
+    // border: none;
+    // cursor: pointer;
+    // display: flex;
+    // justify-content: center;
+
+    // &:hover{
+    //     background-color: white;
+    //     color: black;
+    //     border:1px solid black;
+    // }
+
+    padding:1rem 2rem;
+    border:none;
+    background-color:#000;
+    color:#fff;
+    text-transform:uppercase;
+    border-radius:0.5rem; 
+    transition:0.3s ease;
+    &:hover{
+        background-color: white;
+        color: black;
+        border:1px solid black;
+    }
+
+}
+
+
