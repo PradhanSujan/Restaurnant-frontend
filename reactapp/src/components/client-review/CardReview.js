@@ -12,7 +12,7 @@ const CardReview = (props) => {
               </div>
               <div className="client-details">
                 <div className="client-image">
-                  <img src="" alt="img" />
+                  <img src={props.image} alt="img" />
                 </div>
                 <div className="client-info">
                   <p className='client-name'>{props.name}</p>

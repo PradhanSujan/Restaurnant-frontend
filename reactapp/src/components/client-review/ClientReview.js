@@ -19,7 +19,7 @@ const ClientReview = () => {
             {
               ClientReviewData.map((value, i)=>{
                 return <CardReview name={value.name} address={value.address} 
-                  image={value.FaUserCircle} review={value.review} key={i}
+                image={value.image} review={value.review} key={i}
                 />
 
               })

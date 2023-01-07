@@ -60,7 +60,7 @@
 .navbar .list-item a {
   text-decoration: none;
   color: #444;
-  padding: 1rem;
+  padding:1rem 0;
   text-transform: uppercase;
   transition: 0.5s ease;
   font-weight: 600;
@@ -73,13 +73,14 @@
 }
 
 // .navbar .list-item a:active::after,
-.navbar .list-item a:hover::after {
+.navbar .list-item a:hover::after{
   width: 50%;
   content: "";
   position: absolute;
   border-bottom: 2px solid $main-color;
-  left: 1.1rem;
+  left:0rem;
   bottom: -0.5rem;
+
 }
 
 /*..............media query............*/

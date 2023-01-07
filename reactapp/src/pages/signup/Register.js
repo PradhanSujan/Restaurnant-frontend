@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import FormInput from "./Form-input.component";
 
 const deaultFormField = {
@@ -11,38 +13,84 @@ const deaultFormField = {
 const Register = () => {
   const [formField, setFormField] = useState(deaultFormField);
   const { name, email, password, confirmPassword } = formField;
+  const [error, setError] = useState(null);
+  console.log(error);
 
   const handleInput = (event) => {
     const { name, value } = event.target;
     setFormField({ ...formField, [name]: value });
   };
 
-  const onHandleChange = (event) => {
-    // console.log(event);
-    const { name, value } = event.target;
-  };
-
-  const onHandleSubmit = async(event) => {
+  const onHandleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const res = await fetch("/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          name,
-          email,
-          password,
-          confirmPassword,
-        }),
-      });
+      if (!name || !email || !password || !confirmPassword) {
+        toast.warn("Please Enter The Value ", {
+          position: "top-right",
+        });
+      } else {
+        const res = await fetch("/register", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name,
+            email,
+            password,
+            confirmPassword,
+          }),
+        });
 
-      const data = await res.json();
+        if (!res.ok) {
+          if (res.status === 400 || res.status === 422) {
+            const data = await res.json();
+            setError(data.error);
+            toast.error(`${data.error}`, {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "colored",
+            });
+          } else {
+            toast.error("unexpeted error occurs", {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "colored",
+            });
+          }
+        }
+
+        const data = await res.json();
+        console.log(data);
+        if (data.status === 200 || data) {
+          toast.success("Register Successfully", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+          });
+        } else {
+          console.log(`error`);
+        }
+      }
+
       resetFormFields();
-    } catch (err) {
-      console.log(err);
+    } catch (error) {
+      console.log(error);
     }
   };
 
@@ -114,11 +162,14 @@ const Register = () => {
                 value={confirmPassword}
                 onChange={handleInput}
               />
-              <button className="btn-register" type="submit">Sign Up</button>
+              <button className="btn-register" type="submit">
+                Sign Up
+              </button>
             </form>
           </div>
         </div>
       </div>
+      <ToastContainer />
     </>
   );
 };
