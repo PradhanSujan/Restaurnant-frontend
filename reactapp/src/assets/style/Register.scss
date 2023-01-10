@@ -1,0 +1,65 @@
+@import "./mixin";
+@import "./colors";
+
+$sub-color: grey;
+$main-color: black;
+
+@mixin shrinkLabel {
+  top: -14px;
+  font-size: 12px;
+}
+
+.group {
+  position: relative;
+  margin: 45px 0;
+  .form-input {
+    color: #444;
+    font-size: 18px;
+    padding: 5px 10px 10px 5px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ff9494;
+    &:focus {
+      outline: none;
+    }
+    &:focus ~ .form-input-label {
+      //~ find next sibling
+      @include shrinkLabel();
+    }
+  }
+
+  input[type="password"] {
+    letter-spacing: 0.3em;
+  }
+
+  .form-input-label {
+    color: #444;
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 0px;
+    top: 10px;
+    transition: 300ms ease all;
+
+    &.shrink {
+      @include shrinkLabel();
+    }
+  }
+}
+
+.btn-register {
+  padding: 1rem 2rem;
+  border: none;
+  background-color:#ff9494;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  transition: 0.3s ease;
+  &:hover {
+    background-color: white;
+    color: #ff9494;
+    border: 1px solid #ff9494;
+    cursor:pointer;
+  }
+}

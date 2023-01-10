@@ -1,64 +1,66 @@
-
 // importing SCSS
 
-@import './assets/style/var';
-@import './assets/style/mixin';
-@import './assets/style/fonts';
+@import "./assets/style/var";
+@import "./assets/style/mixin";
+@import "./assets/style/fonts";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-lato;
+}
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: $font-lato;
-  }
+:root {
+  --text-color: #94b49f;
+  --main-color: #df7861;
+  --second-color: #ecb390;
+  --bg-color: #fcf8e8;
+}
 
-
-  :root {
-    --text-color: #94b49f;
-    --main-color: #df7861;
-    --second-color: #ecb390;
-    --bg-color: #fcf8e8;
-  }
-
-
-  // for smooth scroll
+// for smooth scroll
 html {
-    scroll-behavior: smooth;
-    font-size: 62.5%;
-    // it means 1rem = 10px
-  }
-  
-  h1 {
-    font-size: 4.5rem; /* 45px */
-  }
-  
-  h2 {
-    font-size: 3.6rem; /* 36px */
-  }
-  
-  h3 {
-    font-size: 3.2rem; /* 32px */
-  }
-  
-  h4 {
-    font-size: 2.6rem; /* 26px */
-  }
-  
-  h5 {
-    font-size: 2.2rem; /* 22px */
-  }
-  
-  h6 {
-    font-size: 1.8; /* 18px */
-  }
-  
-  body {
-    font-size: 1.6rem;
-  }
-  
-  html,
-  body {
-    height: 100%;
-    width: 100%;
-  }
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  // it means 1rem = 10px
+}
+
+h1 {
+  font-size: 4.5rem; /* 45px */
+}
+
+h2 {
+  font-size: 3.6rem; /* 36px */
+}
+
+h3 {
+  font-size: 3.2rem; /* 32px */
+}
+
+h4 {
+  font-size: 2.6rem; /* 26px */
+}
+
+h5 {
+  font-size: 2.2rem; /* 22px */
+}
+
+h6 {
+  font-size: 1.8; /* 18px */
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

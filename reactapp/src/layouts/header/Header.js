@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
-import '../../assets/style/Header.scss';
+import "../../assets/style/Header.scss";
 
 import Navbar from "./Navbar";
 import logo from "../../assets/brand/logo.png";
@@ -20,7 +20,7 @@ const Header = () => {
         <div className="main-header">
           <div className="header-logo">
             <img src={logo} alt="headerlogo" className="logo" />
-            <p>Resturant.</p>
+            <p>Food Hunt</p>
           </div>
 
           <div className="header-navbar">

@@ -1,31 +1,34 @@
-
-
-@import './mixin';
+@import "./mixin";
 @import "./colors";
 /* hall container*/
 .hall-container {
   width: 100%;
-  height: 70rem;
-  background-color:$bg-color;
+  height: 80rem;
+  background-color: $bg-color;
 }
 
 .hall-container .hall-main-info {
-  @include flex-around;
-  gap: 15rem;
+  // @include flex-around;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items:center;
+  gap: 20rem;
   padding: 2rem;
 }
 
 .hall-container .hall-main-info .hall-info-right {
-  padding: 2rem;
-  flex: 40%;
+  padding: 2rem 10rem;
+  width:100%;
 }
 
 .hall-container .hall-main-info .hall-info-right .hall-book-btn .book-btn {
   padding: 1rem 2rem;
-  background-color:$main-color;
-  color:$white;
+  background-color: $main-color;
+  color: $white;
   border-radius: 0.5rem;
-  transition: 1s;
+  transition: 0.2s ease-in;
+  border: none;
 }
 
 .hall-container
@@ -33,41 +36,38 @@
   .hall-info-right
   .hall-book-btn
   .book-btn:hover {
-  border: 0.1rem solid #fff;
-  padding: 1rem 2rem;
-  border: 0.1rem solid var(--main-color);
-  background-color: #fff;
-  color: var(--main-color);
+  background-color: $secondary-color;
   cursor: pointer;
+  color: $white;
 }
 
 .hall-container .hall-main-info .hall-image-left {
   display: flex;
-  flex: 300px;
+  justify-content:center;
+  align-items:center;
 }
 .hall-container .hall-main-info .hall-image-left .hall-img-bottom {
-  transform: translate(10rem, 20rem);
+  transform: translate(0rem, 20rem);
 }
 
 .hall-container .hall-main-info .hall-image-left img {
-  width: 30rem;
+  width:50rem;
   height: 30rem;
-  transform: translate(10rem, 5rem);
+  transform: translate(5rem, 5rem);
   border: 0.4rem solid #fff;
-  border-bottom-left-radius: 50%;
 }
 
 /*........Media Query.......*/
 
 @media (max-width: 1200px) {
   .hall-container .hall-main-info .hall-image-left img {
-    width: 25rem;
-    height: 20rem;
-    transform: translate(7rem, 1rem);
+    width: 40rem;
+    transform: translate(3rem, 1rem);
   }
 
   .hall-container .hall-main-info .hall-image-left .hall-img-bottom {
-    transform: translate(1rem, 10rem);
+    width: 40rem;
+    transform: translate(-0.9rem, 10rem);
   }
 }
 
