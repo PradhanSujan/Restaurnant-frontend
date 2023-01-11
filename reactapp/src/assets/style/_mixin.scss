@@ -28,35 +28,31 @@
   align-items: center;
 }
 
-@mixin flex-only-space-between{
-    display:flex;
-    justify-content:space-between;
-
+@mixin flex-only-space-between {
+  display: flex;
+  justify-content: space-between;
 }
 
-@mixin flex-column-space-between{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-
+@mixin flex-column-space-between {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
-@mixin flex-space-between{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
+@mixin flex-space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-@mixin grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+@mixin grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-@mixin flex-item-only-center{
-    display: flex;
-    align-items: center;
-
+@mixin flex-item-only-center {
+  display: flex;
+  align-items: center;
 }
 
 @mixin btnBgClr($bgColor, $color) {
@@ -69,5 +65,3 @@
   font-size: 18px;
   color: $color;
 }
-
-

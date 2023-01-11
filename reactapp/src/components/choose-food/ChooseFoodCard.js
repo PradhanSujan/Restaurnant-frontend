@@ -9,9 +9,7 @@ const ChooseFoodCard = (props) => {
         </div>
         <div className="food-info">
           <p className="food-title">{props.title}</p>
-          <p className="food-description">
-           {props.description}
-          </p>
+          <p className="food-description">{props.description}</p>
         </div>
       </div>
     </>

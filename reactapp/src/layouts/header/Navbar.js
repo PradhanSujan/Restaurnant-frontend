@@ -23,8 +23,14 @@ const Navbar = [
     title: "Login",
     path: "/login",
   },
-  { title: "SignUp", 
-  path: "/sign-up" },
+  {
+    title: "SignUp",
+    path: "/sign-up",
+  },
+  {
+    title: "Logout",
+    path: "/logout",
+  },
 ];
 
 export default Navbar;

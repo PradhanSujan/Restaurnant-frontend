@@ -6,10 +6,16 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
-
 import "../../assets/style/Footer.scss";
-
+import { NavLink } from "react-router-dom";
 const Footer = () => {
+
+  const handleClick = () =>{
+    const top = document.querySelector(".header-wrapper");
+    top.scrollIntoView({behavior:"smooth"})
+
+  }
+
   return (
     <>
       <footer className="footer-section">
@@ -57,12 +63,19 @@ const Footer = () => {
             <div className="footer-title quicklinks">
               <h5>Quick Links</h5>
               <div className="quicklinks-details">
-                <ul className="list">
-                  <li>Home</li>
-                  <li>About Us</li>
-                  <li>Menu</li>
-                  <li>Hall and Meeting</li>
-                  <li>Our Client Review</li>
+                <ul>
+                  <li>
+                  <NavLink to="/" onClick={handleClick}>Home</NavLink>
+                  </li>
+                  <li>
+                  <NavLink to="/about" onClick={handleClick}>About</NavLink>
+                  </li>
+                  <li>
+                  <NavLink to="/menu" onClick={handleClick}>Menu</NavLink>
+                  </li>
+                  <li>
+                  <NavLink to="/events" onClick={handleClick}>Events</NavLink>
+                  </li>
                 </ul>
               </div>
             </div>

@@ -1,18 +1,15 @@
 // import React from 'react';
 export default function MenuCard(props) {
-    return (
-      <>
-          <div className="menu-card">
-
-            <img src={props.imgSrc} alt="pizza" />
-            <div className="menu-body">
-            <h5>{props.title}</h5>
-            <p>{props.price}</p>
-            <button className="menu-btn">Order Now</button>
-            </div>
-          </div>
-      </>
-    );
-  }
-
-  
+  return (
+    <>
+      <div className="menu-card">
+        <img src={props.imgSrc} alt="pizza" />
+        <div className="menu-body">
+          <h5>{props.title}</h5>
+          <p>{props.price}</p>
+          <button className="menu-btn">Order Now</button>
+        </div>
+      </div>
+    </>
+  );
+}

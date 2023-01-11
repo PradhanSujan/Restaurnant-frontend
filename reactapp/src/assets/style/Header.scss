@@ -1,5 +1,5 @@
-@import './colors';
-@import './mixin';
+@import "./colors";
+@import "./mixin";
 .header-wrapper {
   height: 10rem;
   width: 100%;
@@ -11,6 +11,7 @@
 .main-header {
   width: 100%;
   @include flex-around;
+  padding: 1rem;
 }
 
 #mobile i {
@@ -37,7 +38,7 @@
   @include flex-center;
 }
 .main-header .header-logo p {
-  color: var(--main-color);
+  color: $main-color;
   font-weight: 700;
   font-size: 2.5rem;
 }
@@ -60,7 +61,7 @@
 .navbar .list-item a {
   text-decoration: none;
   color: #444;
-  padding:1rem 0;
+  padding: 1rem 0;
   text-transform: uppercase;
   transition: 0.5s ease;
   font-weight: 600;
@@ -69,18 +70,17 @@
 .navbar .list-item a:hover,
 .navbar .list-item a:active {
   cursor: pointer;
-  color:$main-color;
+  color: $main-color;
 }
 
 // .navbar .list-item a:active::after,
-.navbar .list-item a:hover::after{
+.navbar .list-item a:hover::after {
   width: 50%;
   content: "";
   position: absolute;
   border-bottom: 2px solid $main-color;
-  left:0rem;
+  left: 0rem;
   bottom: -0.5rem;
-
 }
 
 /*..............media query............*/
@@ -112,7 +112,6 @@
     left: 0;
     background-color: #fff;
   }
-
 
   .navbar .list-item a {
     text-decoration: none;

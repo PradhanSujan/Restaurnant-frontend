@@ -1,7 +1,7 @@
 import React from "react";
-import pizza from "../../assets/images/pizza.jpg";
+import food from "../../assets/images/choose-food.png";
 import ChooseFoodCard from "./ChooseFoodCard";
-import chooseFoodData from "../data/ChooseFoodData";
+import chooseFoodData from "../component-data/ChooseFoodData";
 import "../../assets/style/ChooseFood.scss";
 const ChooseFood = () => {
   return (
@@ -15,7 +15,7 @@ const ChooseFood = () => {
 
           <div className="choose-food-image">
             <div className="left-food-image">
-              <img src={pizza} alt="foodimage" />
+              <img src={food} alt="foodimage" />
             </div>
             <div className="right-food-info">
               {chooseFoodData.map((value, i) => {

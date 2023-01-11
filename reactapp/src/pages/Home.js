@@ -1,5 +1,4 @@
 import React from "react";
-import "../assets/style/Home.scss";
 import Hero from "../components/hero-section/Hero";
 import About from "../components/about/About";
 import Menu from "../components/menu/Menu";
@@ -12,17 +11,15 @@ import Achievement from "../components/achievement/Achievement";
 const Home = () => {
   return (
     <div className="main-wrapper">
-      <div className="container">
-        <Hero />
-        <Achievement />
-        <About />
-        <Menu />
-        <ChooseFood />
-        <MeetingHall />
-        <Events />
-        <ClientReview />
-        <Gallery />
-      </div>
+      <Hero />
+      <Achievement />
+      <About />
+      <Menu />
+      <ChooseFood />
+      <MeetingHall />
+      <Events />
+      <ClientReview />
+      <Gallery />
     </div>
   );
 };

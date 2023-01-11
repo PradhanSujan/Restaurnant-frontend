@@ -1,5 +1,5 @@
 import React from "react";
-import '../../assets/style/Events.scss';
+import "../../assets/style/Events.scss";
 const EventCard = (props) => {
   return (
     <>
@@ -9,9 +9,7 @@ const EventCard = (props) => {
         </div>
         <div className="card-content">
           <h4>{props.title}</h4>
-          <p>
-            {props.para}
-          </p>
+          <p>{props.para}</p>
           <button className="event-btn btn">Book Now</button>
         </div>
       </div>

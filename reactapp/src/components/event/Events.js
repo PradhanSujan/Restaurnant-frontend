@@ -4,7 +4,7 @@ import bipulChettri from "../../assets/images/bipulChettri.png";
 import worldcup from "../../assets/images/worldcup.png";
 import EventCard from "./EventCard";
 
-import '../../assets/style/Events.scss';
+import "../../assets/style/Events.scss";
 
 const Events = () => {
   return (
@@ -12,7 +12,7 @@ const Events = () => {
       <div className="event-section">
         <div className="event-container">
           <div className="event-title">
-          <p>Let's join</p>
+            <p>Let's join</p>
             <h3>Our Events</h3>
           </div>
           <div className="event-cards">

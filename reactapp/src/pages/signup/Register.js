@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import FormInput from "./Form-input.component";
+import FormInput from "./FormInput";
 
 const deaultFormField = {
   name: "",
@@ -13,8 +13,6 @@ const deaultFormField = {
 const Register = () => {
   const [formField, setFormField] = useState(deaultFormField);
   const { name, email, password, confirmPassword } = formField;
-  const [error, setError] = useState(null);
-  console.log(error);
 
   const handleInput = (event) => {
     const { name, value } = event.target;
@@ -45,7 +43,6 @@ const Register = () => {
         if (!res.ok) {
           if (res.status === 400 || res.status === 422) {
             const data = await res.json();
-            setError(data.error);
             toast.error(`${data.error}`, {
               position: "top-right",
               autoClose: 5000,
@@ -71,7 +68,6 @@ const Register = () => {
         }
 
         const data = await res.json();
-        console.log(data);
         if (data.status === 200 || data) {
           toast.success("Register Successfully", {
             position: "top-right",
@@ -101,11 +97,12 @@ const Register = () => {
   return (
     <>
       <div
+        className="register-container"
         style={{
           height: "700px",
           width: "100%",
           paddingTop: "32px",
-          background: "#ddd",
+          background: "#fff",
         }}
       >
         <div
@@ -119,13 +116,15 @@ const Register = () => {
             boxShadow: "0px 0 31px 0px rgb(0 0 0 / 10%",
             backgroundColor: "#fff",
             borderRadius: "20px",
+            borderLeft: "1px solid #ffd1d1",
+            borderBottom: "1px solid #ffd1d1",
           }}
         >
           <h1>Sign Up</h1>
-          <div>
+          <div className="form-section">
             <form onSubmit={onHandleSubmit}>
               <FormInput
-                label="DisplayName"
+                label="Name"
                 type="text"
                 autoComplete="off"
                 required
