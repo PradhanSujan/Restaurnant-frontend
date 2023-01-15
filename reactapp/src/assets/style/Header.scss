@@ -1,126 +1,128 @@
 @import "./colors";
 @import "./mixin";
+/*..............media query............*/
 .header-wrapper {
   height: 10rem;
   width: 100%;
-  background-color: $bg-color;
-  // position: sticky;
-  // top: 0;
+  background-color: #fff;
+  .main-header {
+    .navbar {
+      @include flex-space-between;
+      gap: 5rem;
+    }
+  }
 }
-
 .main-header {
   width: 100%;
   @include flex-around;
   padding: 1rem;
-}
+  .header-logo {
+    text-decoration: none;
+    color: red;
+    font-size: 2rem;
+    gap: 1rem;
+    @include flex-center;
 
-#mobile i {
-  color: #df7861;
-  font-size: 3rem;
-  padding: 0 1rem;
+    p {
+      color: #000;
+      font-weight: 700;
+      font-size: 2.5rem;
+    }
+    .logo {
+      width: 6rem;
+      height: 6rem;
+    }
+  }
 }
-
-#mobile i:hover {
-  color: #000;
-  cursor: pointer;
-}
-
-// dispplay hide for mobile
 #mobile {
+  i {
+    color: #000;
+    font-size: 3rem;
+    margin-bottom: 10rem;
+    &:hover {
+      color: #000;
+      cursor: pointer;
+    }
+  }
   display: none;
 }
-
-.main-header .header-logo {
-  text-decoration: none;
-  color: $secondary-color;
-  font-size: 2rem;
-  gap: 1rem;
-  @include flex-center;
+.navbar {
+  .list-item {
+    list-style: none;
+    position: relative;
+    a {
+      text-decoration: none;
+      color: #000;
+      padding: 1rem 0;
+      text-transform: uppercase;
+      transition: 0.5s ease;
+      font-weight: 600;
+      font-size: 1.2rem;
+      &:hover {
+        cursor: pointer;
+        color: #000;
+        &::after {
+          width: 50%;
+          content: "";
+          position: absolute;
+          border-bottom: 2px solid red;
+          left: 0rem;
+          bottom: -0.5rem;
+        }
+      }
+      &:active {
+        cursor: pointer;
+        color: red;
+      }
+    }
+  }
 }
-.main-header .header-logo p {
-  color: $main-color;
-  font-weight: 700;
-  font-size: 2.5rem;
-}
-
-.main-header .header-logo .logo {
-  width: 6rem;
-  height: 6rem;
-}
-
-.header-wrapper .main-header .navbar {
-  @include flex-space-between;
-  gap: 5rem;
-}
-
-.navbar .list-item {
-  list-style: none;
-  position: relative;
-}
-
-.navbar .list-item a {
-  text-decoration: none;
-  color: #444;
-  padding: 1rem 0;
-  text-transform: uppercase;
-  transition: 0.5s ease;
-  font-weight: 600;
-}
-
-.navbar .list-item a:hover,
-.navbar .list-item a:active {
-  cursor: pointer;
-  color: $main-color;
-}
-
-// .navbar .list-item a:active::after,
-.navbar .list-item a:hover::after {
-  width: 50%;
-  content: "";
-  position: absolute;
-  border-bottom: 2px solid $main-color;
-  left: 0rem;
-  bottom: -0.5rem;
-}
-
-/*..............media query............*/
-
 @media (max-width: 990px) {
   .main-header {
     width: 100%;
     flex-direction: column;
+    .header-navbar {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        gap: 1rem;
+        top: 10rem;
+        left: -400px;
+        width: 250px;
+        height: 50rem;
+        padding: 10rem 5rem;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        transition: 0.3s ease-in-out;
+      }
+    }
   }
-  .main-header .header-navbar .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    position: fixed;
-    gap: 1rem;
-    top: 10rem;
-    left: -400px;
-    width: 250px;
-    height: 50rem;
-    padding: 10rem 5rem;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    transition: 0.3s ease-in-out;
-  }
-
   #mobile {
     display: block;
   }
-
-  .header-wrapper .main-header .navbar.mobile-navbar-active {
-    left: 0;
-    background-color: #fff;
+  .header-wrapper {
+    .main-header {
+      .navbar.mobile-navbar-active {
+        left: 0;
+        background-color: #ddd;
+      }
+    }
   }
-
-  .navbar .list-item a {
-    text-decoration: none;
-    color: #000;
+  .navbar {
+    .list-item {
+      a {
+        text-decoration: none;
+        color: red;
+      }
+    }
   }
 }
-
 @media (max-width: 480px) {
-  .main-header .header-navbar .navbar {
-    width: 200px;
+  .main-header {
+    .header-navbar {
+      .navbar {
+        width: 200px;
+      }
+    }
   }
 }

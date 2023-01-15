@@ -38,15 +38,15 @@
   .achievement-section {
     height: 75rem;
   }
-
   .achievement-container {
     flex-direction: column;
     gap: 5rem;
   }
 }
-
 @media (max-width: 800px) {
-  .achievement-section h3 {
-    font-size: 3rem;
+  .achievement-section {
+    h3 {
+      font-size: 3rem;
+    }
   }
 }
