@@ -40,8 +40,6 @@ const Header = () => {
               })}
             </ul>
           </div>
-
-          <div></div>
         </div>
         {/* menu bar */}
         <div id="mobile" onClick={handleClick}>

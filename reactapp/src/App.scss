@@ -11,13 +11,6 @@
   font-family: $font-lato;
 }
 
-:root {
-  --text-color: #94b49f;
-  --main-color: #df7861;
-  --second-color: #ecb390;
-  --bg-color: #fcf8e8;
-}
-
 // for smooth scroll
 html {
   scroll-behavior: smooth;
@@ -26,37 +19,38 @@ html {
 }
 
 h1 {
-  font-size: 4.5rem; /* 45px */
+  font-size:$h1; /* 45px */
 }
 
 h2 {
-  font-size: 3.6rem; /* 36px */
+  font-size:$h2; /* 36px */
 }
 
 h3 {
-  font-size: 3.2rem; /* 32px */
+  font-size:$h3; /* 32px */
 }
 
 h4 {
-  font-size: 2.6rem; /* 26px */
+  font-size:$h4; /* 26px */
 }
 
 h5 {
-  font-size: 2.2rem; /* 22px */
+  font-size:$h5; /* 22px */
 }
 
 h6 {
-  font-size: 1.8; /* 18px */
+  font-size:$h6; /* 18px */
 }
 
-body {
-  font-size: 1.6rem;
+p{
+  font-size:$p;
 }
+
 
 html,
 body {
-  height: 100%;
-  width: 100%;
+  height:height;
+  width:height;
 }
 
 .app-container {

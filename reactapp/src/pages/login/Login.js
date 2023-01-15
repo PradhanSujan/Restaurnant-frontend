@@ -67,10 +67,12 @@ const Login = () => {
             progress: undefined,
             theme: "colored",
           });
+
+          resetLoginForm();
+
           // navigate('/');
         }
       }
-      resetLoginForm();
     } catch (error) {
       console.log(error);
     }
@@ -79,6 +81,33 @@ const Login = () => {
   const resetLoginForm = () => {
     setUser(defaultLogin);
   };
+
+
+  const handleForgotPassword = async (event) =>{
+    console.log(email);
+    event.preventDefault();
+try{
+   const res =  await fetch('/forgetpassword', {
+        method:"POST",
+        headers:{
+          "Content-Type":"application/json",
+        },
+        body:JSON.stringify({
+          email,
+        })
+
+    })
+
+    const data = await res.json();
+    console.log(data);
+  }catch(error){
+    console.log(error);
+  }
+    
+
+
+    
+  }
 
   return (
     <>
@@ -109,7 +138,7 @@ const Login = () => {
               />
             </div>
             <p>
-              <a href="#!">Forgot password?</a>
+              <button onClick={handleForgotPassword}>Forgot password?</button>
             </p>
             {isLoggedIn ? (
               <button className="login-btn" onClick={formSubmit}>

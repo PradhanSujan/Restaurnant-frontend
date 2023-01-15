@@ -5,235 +5,117 @@
   width: 100%;
   height: 50rem;
   .about-container {
-    width: 100%;
-    @include flex-around-wrap;
-    padding:2rem;
+    .about-left {
+      width: 50rem;
+      height: 30rem;
+      h3 {
+        margin-bottom: 2rem;
+      }
+      .about-content {
+        line-height: 2rem;
+      }
+    }
+    img {
+      width: 60rem;
+      height: 30rem;
+      object-fit: cover;
+      border-radius: 0.5rem;
+    }
   }
 }
 
-
-
-.about-section .about-container .about-left {
-  width: 50rem;
-  height: 30rem;
+.about-container {
+  width: 100%;
+  @include flex-around-wrap;
+  padding: 2rem;
 }
 
-.about-section .about-container .about-left h3 {
-  margin-bottom: 2rem;
-}
-
-.about-section .about-container .about-left .about-content {
-  line-height: 2rem;
-}
-
-.about-left .about-content .about-title {
-  line-height: 3rem;
-}
-.about-left .about-content .about-title p {
-  color: $main-color;
-}
-
-.about-section .about-container img {
-  width: 60rem;
-  height: 30rem;
-  object-fit: cover;
-  border-radius:0.5rem;
-
+.about-left {
+  .about-content {
+    .about-title {
+      line-height: 3rem;
+      p {
+        color: $main-color;
+      }
+    }
+  }
 }
 
 /*............Media Query.............*/
-
 @media (max-width: 1200px) {
-  .about-section .about-container {
-    gap: 4rem;
-  }
+  .about-section {
+    .about-container {
+      gap: 4rem;
+      .about-left {
+        width: 30rem;
+        height: 30rem;
+        h3 {
+          margin-bottom: 1rem;
+        }
+      }
 
-  .about-section .about-container .about-left {
-    width: 30rem;
-    height: 30rem;
-  }
-
-  .about-section .about-container .about-left h3 {
-    margin-bottom: 1rem;
-  }
-
-  .about-section .about-container img {
-    width: 40rem;
-    height: 20rem;
+      img {
+        width: 40rem;
+        height: 20rem;
+      }
+    }
   }
 }
 
 @media (max-width: 990px) {
-  // about us
   .about-section {
     height: 80rem;
+    .about-container {
+      padding: 3rem 0rem;
+      img {
+        width: 35rem;
+        height: 25rem;
+        object-fit: cover;
+      }
+    }
   }
-  .about-section .about-container {
-    padding: 3rem 0rem;
-  }
-  .about-section .about-container img {
-    width: 35rem;
-    height: 25rem;
-    object-fit: cover;
-  }
-
-  .about-left .about-content {
-    padding: 1rem;
+  .about-left {
+    .about-content {
+      padding: 1rem;
+    }
   }
 }
 
 @media (max-width: 800px) {
-  .about-section .about-container {
-    gap: 15rem;
-    flex-direction: column;
-  }
-  .about-section .about-container img {
-    width: 35rem;
-    height: 25rem;
-    object-fit: cover;
+  .about-section {
+    .about-container {
+      gap: 15rem;
+      flex-direction: column;
+      img {
+        width: 35rem;
+        height: 25rem;
+        object-fit: cover;
+      }
+    }
   }
 }
-
 @media (max-width: 600px) {
-  .about-section .about-container {
-    height: 80rem;
+  .about-section {
+    .about-container {
+      height: 80rem;
+      img {
+        width: 30rem;
+        height: 20rem;
+      }
+    }
   }
-  .about-section .about-container img {
-    width: 30rem;
-    height: 20rem;
-  }
-
-  .about-left .about-content {
-    padding: 1rem;
+  .about-left {
+    .about-content {
+      padding: 1rem;
+    }
   }
 }
-
 @media (max-width: 480px) {
-  .about-section .about-container img {
-    width: 25rem;
+  .about-section {
+    .about-container {
+      img {
+        width: 25rem;
+      }
+    }
   }
 }
-
-
-// $color_1: $main-color;
-
-// @import "./mixin";
-// @import "./colors";
-// /*............Media Query.............*/
-// .about-section {
-// 	width: 100%;
-// 	height: 50rem;
-// 	.about-container {
-// 		.about-left {
-// 			width: 50rem;
-// 			height: 30rem;
-// 			h3 {
-// 				margin-bottom: 2rem;
-// 			}
-// 			.about-content {
-// 				line-height: 2rem;
-// 			}
-// 		}
-// 		img {
-// 			width: 50rem;
-// 			height: 30rem;
-// 			object-fit: cover;
-// 		}
-// 	}
-// }
-// .about-container {
-// 	width: 100%;
-// 	@include flex-around-wrap; padding: 4rem 10rem;
-// }
-// .about-left {
-// 	.about-content {
-// 		.about-title {
-// 			line-height: 3rem;
-// 			p {
-// 				color: $color_1;
-// 			}
-// 		}
-// 	}
-// }
-// @media (max-width: 1200px) {
-// 	.about-section {
-// 		.about-container {
-// 			gap: 4rem;
-// 			.about-left {
-// 				width: 30rem;
-// 				height: 30rem;
-// 				h3 {
-// 					margin-bottom: 1rem;
-// 				}
-// 			}
-// 			img {
-// 				width: 40rem;
-// 				height: 20rem;
-// 			}
-// 		}
-// 	}
-// }
-// @media (max-width: 990px) {
-// 	// {
-// 		about {
-// 			us {
-// 				.about-section {
-// 					height: 80rem;
-// 				}
-// 			}
-// 		}
-// 	}
-// 	.about-section {
-// 		.about-container {
-// 			padding: 3rem 0rem;
-// 			img {
-// 				width: 35rem;
-// 				height: 25rem;
-// 				object-fit: cover;
-// 			}
-// 		}
-// 	}
-// 	.about-left {
-// 		.about-content {
-// 			padding: 1rem;
-// 		}
-// 	}
-// }
-// @media (max-width: 800px) {
-// 	.about-section {
-// 		.about-container {
-// 			gap: 15rem;
-// 			flex-direction: column;
-// 			img {
-// 				width: 35rem;
-// 				height: 25rem;
-// 				object-fit: cover;
-// 			}
-// 		}
-// 	}
-// }
-// @media (max-width: 600px) {
-// 	.about-section {
-// 		.about-container {
-// 			height: 80rem;
-// 			img {
-// 				width: 30rem;
-// 				height: 20rem;
-// 			}
-// 		}
-// 	}
-// 	.about-left {
-// 		.about-content {
-// 			padding: 1rem;
-// 		}
-// 	}
-// }
-// @media (max-width: 480px) {
-// 	.about-section {
-// 		.about-container {
-// 			img {
-// 				width: 25rem;
-// 			}
-// 		}
-// 	}
-// }

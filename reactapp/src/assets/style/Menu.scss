@@ -1,199 +1,181 @@
-/*.........................menu sections.................... */
 @import "./mixin";
 @import "./colors";
-
 .menu-section {
   width: 100%;
   height: 80rem;
   background-color: $section-bg-color;
-}
-
-.menu-section .menu-container {
-  width: 100%;
-  padding: 6rem;
-  @include flex-direction-column;
-  gap: 4rem;
-}
-
-.menu-container .menu-description {
-  line-height: 3rem;
-}
-
-.menu-container .menu-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  row-gap: 2rem;
-  column-gap: 2rem;
-}
-
-.menu-card {
-  width: 25rem;
-  height: 40rem;
-  background: $bg-color;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-}
-
-.menu-card .menu-body {
-  padding: 1rem;
-}
-.menu-card img {
-  width: 25rem;
-  height: 20rem;
-  object-fit: cover;
-}
-
-.menu-container .menu-content .menu-card h5 {
-  color: $main-color;
-}
-.menu-container .menu-content .menu-card .menu-btn {
-  @include btnBgClr($main-color, #000);
-  width: 100%;
-  transition: 0.5s ease-out;
-  color: #fff;
-}
-.menu-container .menu-content .menu-card .menu-btn:hover {
-  border: 1px solid $main-color;
-  cursor: pointer;
-  color: $main-color;
-  background-color: #fff;
-}
-
-/*........Media Query.......... */
-@media (max-width: 1200px) {
-
-  .menu-card {
-    width: 20rem;
-    height: 35rem;
+  .menu-container {
+    width: 100%;
+    padding: 6rem;
+    @include flex-direction-column;
+    gap: 4rem;
   }
-  .menu-card img {
-    width: 20rem;
-    height: 20rem;
+}
+.menu-container {
+  .menu-description {
+    line-height: 3rem;
   }
-
-  .menu-container .menu-content {
+  .menu-content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     row-gap: 2rem;
     column-gap: 2rem;
+    .menu-card {
+      h5 {
+        color: $main-color;
+      }
+      .menu-btn {
+        // @include btnbgclr($color_1, #000);
+        background-color: $black;
+        padding: 1rem 2rem;
+        border: 1px solid $black;
+        border-radius: 0.5rem;
+        width: 100%;
+        transition: 0.5s ease-out;
+        color: $white;
+        &:hover {
+          border: 1px solid $main-color;
+          cursor: pointer;
+          color: $main-color;
+          background-color: $white;
+        }
+      }
+    }
+  }
+}
+.menu-card {
+  width: 25rem;
+  height: 40rem;
+  background: $white;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  .menu-body {
+    padding: 1rem;
+  }
+  img {
+    width: 25rem;
+    height: 20rem;
+    object-fit: cover;
   }
 }
 
+/*........Media Query.......... */
+
+@media (max-width: 1200px) {
+  .menu-card {
+    width: 20rem;
+    height: 35rem;
+    img {
+      width: 20rem;
+      height: 20rem;
+    }
+  }
+  .menu-container {
+    .menu-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      row-gap: 2rem;
+      column-gap: 2rem;
+    }
+  }
+}
 @media (max-width: 990px) {
-  // menu
   .menu-section {
     height: 100rem;
+    .menu-container {
+      padding: 5rem 4rem;
+      gap: 1rem;
+    }
   }
-
-  .menu-section .menu-container {
-    padding: 5rem 4rem;
-    gap: 1rem;
+  .menu-container {
+    .menu-content {
+      grid-template-columns: 1fr 1fr;
+    }
   }
-
-  // .menu-container .menu-content {
-  //   flex-wrap: wrap;
-  //   padding-top: 1rem;
-  //   gap: 4rem;
-  // }
-
-  .menu-container .menu-content {
-    grid-template-columns: 1fr 1fr;
-  }
-
   .menu-card {
     width: 30rem;
     background: #ddd;
     height: 40rem;
-  }
-  .menu-card .menu-body {
-    padding: 1rem;
-  }
-  .menu-card img {
-    height: 25rem;
-    width: 30rem;
+    .menu-body {
+      padding: 1rem;
+    }
+    img {
+      height: 25rem;
+      width: 30rem;
+    }
   }
 }
-
 @media (max-width: 800px) {
-  // menu
   .menu-section {
     height: 110rem;
+    .menu-container {
+      padding: 5rem;
+      gap: 1rem;
+    }
   }
-
-  .menu-section .menu-container {
-    padding: 5rem;
-    gap: 1rem;
+  .menu-container {
+    .menu-content {
+      flex-wrap: wrap;
+      padding-top: 1rem;
+      gap: 4rem;
+    }
   }
-
-  .menu-container .menu-content {
-    flex-wrap: wrap;
-    padding-top: 1rem;
-    gap: 4rem;
-  }
-
   .menu-card {
     width: 20rem;
     background: #ddd;
     height: 40rem;
-  }
-  .menu-card .menu-body {
-    padding: 1rem;
-  }
-  .menu-card img {
-    width: 20rem;
-    height: 25rem;
+    .menu-body {
+      padding: 1rem;
+    }
+    img {
+      width: 20rem;
+      height: 25rem;
+    }
   }
 }
-
 @media (max-width: 600px) {
   .menu-section {
     height: 150rem;
+    .menu-container {
+      padding: 5rem;
+      gap: 1rem;
+    }
   }
-
-  .menu-section .menu-container {
-    padding: 5rem;
-    gap: 1rem;
+  .menu-container {
+    .menu-content {
+      grid-template-columns: 1fr;
+    }
   }
-
-  .menu-container .menu-content {
-    grid-template-columns: 1fr;
-  }
-
   .menu-card {
     width: 25rem;
     background: #ddd;
     height: 30rem;
-  }
-  .menu-card .menu-body {
-    padding: 1rem;
-  }
-  .menu-card img {
-    width: 25rem;
-    height: 17rem;
-  }
-
-  .menu-card h4 {
-    font-size: 2.1rem;
+    .menu-body {
+      padding: 1rem;
+    }
+    img {
+      width: 25rem;
+      height: 17rem;
+    }
+    h4 {
+      font-size: 2.1rem;
+    }
   }
 }
-
 @media (max-width: 480px) {
-  // menu
   .menu-section {
     height: 145rem;
   }
-
-  .menu-container .menu-content {
-    gap: 2rem;
+  .menu-container {
+    .menu-content {
+      gap: 2rem;
+    }
   }
-
   .menu-card {
-    background: #ddd;
     height: 30rem;
-  }
-
-  .menu-card img {
-    width: 20rem;
-    height: 15rem;
+    img {
+      width: 20rem;
+      height: 15rem;
+    }
   }
 }
