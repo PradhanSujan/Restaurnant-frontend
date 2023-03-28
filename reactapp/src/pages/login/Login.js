@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
 import "../../assets/style/Login.scss";
 import Logout from "../logout/Logout";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { UserContext } from "../../App";
 
 const defaultLogin = {
   email: "",
@@ -11,6 +12,10 @@ const defaultLogin = {
   redirectRole: false,
 };
 const Login = () => {
+  // we call use context
+  const { state, dispatch } = useContext(UserContext);
+  console.log(state);
+
   const [user, setUser] = useState(defaultLogin);
   const { email, password, redirectRole } = user;
   const [isLoggedIn, setisLoggedIn] = useState(false);
@@ -55,7 +60,13 @@ const Login = () => {
           }
         } else {
           const data = await res.json();
+          dispatch({ type: "USER", payload: "true" });
           localStorage.setItem("jwt", JSON.stringify(data.signInToken));
+          //here type mean konsa action performed garne ho
+          //payload means us action ke sath app extra message kya pass kar rahe ho
+          // kina ki hami dispatch ko yesari define garchhau
+          //tyo automatically action ko triggered garchha
+          //and action ko through apna jo state hai usko value ko change garna sakchhau
           setisLoggedIn(true);
           toast.success("login Success", {
             position: "top-right",
@@ -70,7 +81,7 @@ const Login = () => {
 
           resetLoginForm();
 
-          // navigate('/');
+          navigate("/");
         }
       }
     } catch (error) {
@@ -82,32 +93,26 @@ const Login = () => {
     setUser(defaultLogin);
   };
 
-
-  const handleForgotPassword = async (event) =>{
+  const handleForgotPassword = async (event) => {
     console.log(email);
     event.preventDefault();
-try{
-   const res =  await fetch('/forgetpassword', {
-        method:"POST",
-        headers:{
-          "Content-Type":"application/json",
+    try {
+      const res = await fetch("/forgetpassword", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-        body:JSON.stringify({
+        body: JSON.stringify({
           email,
-        })
+        }),
+      });
 
-    })
-
-    const data = await res.json();
-    console.log(data);
-  }catch(error){
-    console.log(error);
-  }
-    
-
-
-    
-  }
+      const data = await res.json();
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <>

@@ -38,6 +38,7 @@
   i {
     color: #000;
     font-size: 3rem;
+    margin-left:1rem;
     margin-bottom: 10rem;
     &:hover {
       color: #000;
@@ -49,7 +50,7 @@
 .navbar {
   .list-item {
     list-style: none;
-    position: relative;
+    // position: relative;
     a {
       text-decoration: none;
       color: #000;
@@ -58,18 +59,25 @@
       transition: 0.5s ease;
       font-weight: 600;
       font-size: 1.2rem;
+      position: relative;
       &:hover {
         cursor: pointer;
         color: #000;
-        &::after {
-          width: 50%;
-          content: "";
-          position: absolute;
-          border-bottom: 2px solid red;
-          left: 0rem;
-          bottom: -0.5rem;
-        }
+      
+      &::after {
+    width:60%;
+    content: "";
+    position: absolute;
+    border-bottom: 2px solid red;
+    left:0rem;
+    bottom: 0rem;
+    padding: 10rem 0rem;
       }
+
+  
+      
+    }
+      
       &:active {
         cursor: pointer;
         color: red;
@@ -87,13 +95,14 @@
         align-items: flex-start;
         position: fixed;
         gap: 1rem;
-        top: 10rem;
+        top: 15rem;
         left: -400px;
         width: 250px;
         height: 50rem;
         padding: 10rem 5rem;
+        background-color:#fff;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        transition: 0.3s ease-in-out;
+        transition: 0.3s ease-out;
       }
     }
   }
@@ -104,7 +113,8 @@
     .main-header {
       .navbar.mobile-navbar-active {
         left: 0;
-        background-color: #ddd;
+        background-color: #fff;
+        z-index:1;
       }
     }
   }
