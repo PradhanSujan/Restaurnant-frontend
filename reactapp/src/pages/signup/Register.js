@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import FormInput from "./FormInput";
@@ -13,6 +14,7 @@ const deaultFormField = {
 const Register = () => {
   const [formField, setFormField] = useState(deaultFormField);
   const { name, email, password, confirmPassword } = formField;
+  const navigate = useNavigate();
 
   const handleInput = (event) => {
     const { name, value } = event.target;
@@ -69,16 +71,20 @@ const Register = () => {
 
         const data = await res.json();
         if (data.status === 200 || data) {
-          toast.success("Register Successfully", {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "colored",
-          });
+          setTimeout(
+            toast.success("Register Successfully", {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "colored",
+            }),
+            1000
+          );
+          navigate("/login");
         } else {
           console.log(`error`);
         }

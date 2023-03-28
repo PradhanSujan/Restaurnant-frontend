@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate} from "react-router-dom";
+import React, { useState, useEffect, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import { UserContext } from "../../App";
 
 const Logout = () => {
+  //now we don't use consumer we use useContext
+  const { state, dispatch } = useContext(UserContext);
   const navigate = useNavigate();
-  // const [isLoggedIn, setisLoggedIn] = useState(true);
-
   useEffect(() => {
     const formLogout = async () => {
       const jwt = JSON.parse(localStorage.getItem("jwt"));
@@ -27,10 +28,12 @@ const Logout = () => {
 
         const data = await res.json();
         if (data) {
+          console.log(data);
+
+          dispatch({ type: "USER", payload: false });
           localStorage.removeItem("jwt");
           localStorage.clear();
           console.log(data);
-
           toast.success(`${data.message}`, {
             position: "top-right",
             autoClose: 5000,
